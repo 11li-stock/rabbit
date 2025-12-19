@@ -1,0 +1,146 @@
+* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            background: url("./img/bg0.png") no-repeat center/cover; /* 第二张图的背景 */
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+            font-family: "Microsoft Yahei", sans-serif;
+            color: #fff;
+        }
+
+        /* 主容器：全屏居中 */
+        .player-wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 100px;
+        }
+
+        /* 顶部区域：唱片+标题 */
+        .top-section {
+            display: flex;
+            align-items: center;
+            gap: 120px;
+            margin-bottom: 100px;
+        }
+
+        /* 唱片容器（黑色大圆环+荷花小图） */
+        .record-container {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .record-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: url("./img/record0.jpg") no-repeat center/cover; /* 荷花图 */
+        }
+
+        /* 音乐信息（标题+作者） */
+        .music-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .music-title {
+            font-size: 4.5rem;
+            font-weight: 400;
+        }
+        .music-author {
+            font-size: 1.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* 底部区域：进度条+控制按钮 */
+        .bottom-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 进度条+时间 */
+        .progress-area {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .time-display {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-active {
+            width: 30%; /* 模拟进度 */
+            height: 100%;
+            background-color: #00ff9d; /* 第二张图的绿色进度条 */
+        }
+
+        /* 控制按钮区 */
+        .controls-area {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+        }
+        /* 播放按钮（绿色突出） */
+        .play-btn {
+            background-color: #00ff9d;
+            border: none;
+        }
+        .play-btn img {
+            filter: invert(1); /* 图标变黑色 */
+        }
+
+        /* 按钮图标 */
+        .btn-icon {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+        }
+
+        /* 右侧功能区（音量+倍速+列表） */
+        .func-area {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .volume-slider {
+            width: 100px;
+            height: 6px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 3px;
+        }
+        .func-text {
+            font-size: 1rem;
+            cursor: pointer;
+        }
